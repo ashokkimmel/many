@@ -1,0 +1,37 @@
+cabal-version:   3.0
+Name:            many
+Version:         0.1.0.0
+License:         BSD-3-Clause
+License-file:    LICENSE
+Author:          Ashok Kimmel
+Maintainer:      <ashok.kimmel@gmail.com>
+Category:        Control
+Synopsis:        Arbitrary argument number for certain functions
+Build-Type:      Simple
+extra-doc-files:    CHANGELOG.md
+Description:
+  This allows for functions like the following: list@4 1 2 3 4 == [1,2,3,4]
+  This is usefull with currying and higher order functions. 
+
+Stability:       Experimental
+
+Tested-With:
+  GHC ==9.4.8
+
+Source-repository head
+    Type: git
+    Location: https://github.com/ashokkimmel/many
+
+library
+  hs-source-dirs:   src
+  default-language: Haskell2010
+  ghc-options:      -Wall
+  exposed-modules:  Control.Many.Indexed
+                    Control.Many.Unindexed
+                    Control.Many.Curry
+  other-modules:    Control.Many.Types
+  
+  other-extensions: UndecidableInstances, TypeApplications, ScopedTypeVariables, FunctionalDependencies, TypeFamilies, DataKinds, AllowAmbiguousTypes
+
+  build-depends:
+    , base      >=4.12.0.0 && <4.21
