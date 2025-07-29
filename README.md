@@ -21,5 +21,6 @@ mapN allows you to map inside n layers of functors: example
     -- we need to go up then move:
     upThenMove = mapN @2 up allmoves
 constN allows you to skip an arbitrary amount of variables
+
     chain3 :: Parser a -> Parser b -> Parser c -> Parser ()
     chain3 = liftA3 (constN @3 ())
