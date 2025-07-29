@@ -1,6 +1,6 @@
 This package introduces a set of type based arguments that can take in as many parameters as you wish:  
 
-    mk4lst :: a -> a -> a -> a -> \[a\]
+    mk4lst :: a -> a -> a -> a -> [a]
     mk4lst = list @4 -- \a b c d -> [a,b,c,d]
 
 This uses the list function which allows you to build a function that takes an arbitrary ammount of elements and turns them into a list.
